@@ -11,8 +11,8 @@ import { chekingAuthentication, startGoogleSingIn } from "../../store/auth";
 export const LoginPage = () => {
   const dispatch = useDispatch()
   const { email, password, onInputChange } = useForm({
-    email: "danimaster99@gmail.com",
-    password: "1234",
+    email: "",
+    password: "",
   });
   const onSubmit = (event) => {
     event.preventDefault();
