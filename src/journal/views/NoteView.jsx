@@ -1,8 +1,15 @@
 import { SaveOutlined } from "@mui/icons-material";
 import { Button, Grid, TextField, Typography } from "@mui/material";
+import { useSelector } from "react-redux";
+import { useForm } from "../../hooks/useForm";
 import { ImageGallery } from "../components";
 
 export const NoteView = () => {
+
+  const { active:note } = useSelector( state => state.journal );
+  const {body, title, onInputChange, formState} = useForm( note )
+
+  
   return (
     <Grid
       className="animate__animated animate__fadeIn animate__faster"
