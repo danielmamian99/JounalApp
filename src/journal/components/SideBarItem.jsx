@@ -13,13 +13,13 @@ import { useDispatch } from "react-redux";
 import { setActiveNote } from "../../store/journal";
 
 
-export const SideBarItem = ({ title, body, date, id, imageUrl= [] }) => {
+export const SideBarItem = ({ title, body, date, id, imageUrls= [] }) => {
     const dispatch = useDispatch()
     const handlerClick = useCallback(
       () => {
-        dispatch(setActiveNote({title, body, date, id, imageUrl}))
+        dispatch(setActiveNote({title, body, date, id, imageUrls}))
       },
-      [title, body, date, id],
+      [title, body, date, id, imageUrls],
     )
     const newTitle = useMemo(() => {
         return title.length > 17

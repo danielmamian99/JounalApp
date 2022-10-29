@@ -11,7 +11,6 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-import { TurnedInNot } from "@mui/icons-material";
 import { useSelector } from "react-redux";
 import { SideBarItem } from "./SideBarItem";
 
