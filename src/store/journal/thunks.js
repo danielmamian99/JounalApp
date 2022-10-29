@@ -13,11 +13,11 @@ export const startNewNote = ()=>{
             title: '',
             body: '',
             date: new Date().getTime(),
-
+            imageUrls: [],
         }
         dispatch(savingNewNote())
         const newDoc = doc(collection(firebaseDB, `${ uid }/journal/notes`));
-        const setDocResp = await setDoc( newDoc, newNote );
+        await setDoc( newDoc, newNote );
         newNote.id = newDoc.id
         dispatch(addNewEmptyNote(newNote));
         dispatch(setActiveNote(newNote));
