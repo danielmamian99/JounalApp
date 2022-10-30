@@ -31,7 +31,7 @@ const formValidations = {
 export const RegisterPage = () => {
   const dispatch = useDispatch();
   const { status, errorMessage } = useSelector((state) => state.auth);
-  const isChekingAthentication = useMemo(() => status === "checking", [status]);
+  const isCheckingAthentication = useMemo(() => status === "checking", [status]);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const {
     displayName,
@@ -105,7 +105,7 @@ export const RegisterPage = () => {
             </Grid>
             <Grid item xs={12}>
               <Button
-                disabled={isChekingAthentication}
+                disabled={isCheckingAthentication}
                 type="submit"
                 variant="contained"
                 fullWidth

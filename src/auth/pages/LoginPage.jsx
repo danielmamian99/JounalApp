@@ -14,7 +14,7 @@ import { Google } from "@mui/icons-material";
 import { AuthLayout } from "../layout/AuthLayout";
 import { useForm } from "../../hooks";
 import {
-  chekingAuthentication,
+  checkingAuthentication,
   startGoogleSingIn,
   startLoginWithEmailPassword,
 } from "../../store/auth";
@@ -30,7 +30,7 @@ export const LoginPage = () => {
   const dispatch = useDispatch();
   const { email, password, onInputChange } = useForm(formData);
 
-  const isAuthenticating = useMemo(() => status === "cheking", [status]);
+  const isAuthenticating = useMemo(() => status === "checking", [status]);
 
   const onSubmit = (event) => {
     event.preventDefault();

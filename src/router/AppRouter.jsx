@@ -8,7 +8,7 @@ import { CheckingAuth } from '../ui/components/CheckingAuth';
 
 export const AppRouter = () => {
   const status = useCheckAuth();
-  if(status === 'cheking'){
+  if(status === 'checking'){
     return <CheckingAuth/>
   }
   return (
