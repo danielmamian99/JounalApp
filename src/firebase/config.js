@@ -16,18 +16,32 @@ import { getEnvironments } from '../helpers/getEnvironments';
 //   messagingSenderId: "1054856956705",
 //   appId: "1:1054856956705:web:f7c1e784efa732151c4c60"
 // };
-const env = getEnvironments();
-console.log(env)
+const {
+  VITE_APIKEY,
+  VITE_AUTHDOMAIN,
+  VITE_PROJECTID,
+  VITE_STORAGEBUCKET,
+  VITE_MESSAGINGSENDERID,
+  VITE_APPID
+} = getEnvironments();
 //testing
-const firebaseConfig = {
-  apiKey: "AIzaSyBkl1DiWvpw9dOxRLV4PaLluLDooc_4eGQ",
-  authDomain: "react-test-49014.firebaseapp.com",
-  projectId: "react-test-49014",
-  storageBucket: "react-test-49014.appspot.com",
-  messagingSenderId: "467108364463",
-  appId: "1:467108364463:web:227c5974d849dc36d5945a"
-};
+// const firebaseConfig = {
+  // apiKey: "AIzaSyBkl1DiWvpw9dOxRLV4PaLluLDooc_4eGQ",
+  // authDomain: "react-test-49014.firebaseapp.com",
+  // projectId: "react-test-49014",
+  // storageBucket: "react-test-49014.appspot.com",
+  // messagingSenderId: "467108364463",
+  // appId: "1:467108364463:web:227c5974d849dc36d5945a"
+// };
 
+const firebaseConfig = {
+  apiKey:VITE_APIKEY,
+  authDomain: VITE_AUTHDOMAIN,
+  projectId: VITE_PROJECTID,
+  storageBucket: VITE_STORAGEBUCKET,
+  messagingSenderId: VITE_MESSAGINGSENDERID,
+  appId: VITE_APPID
+};
 // Initialize Firebase
 export const firebaseApp = initializeApp(firebaseConfig);
 
