@@ -14,7 +14,6 @@ import { Google } from "@mui/icons-material";
 import { AuthLayout } from "../layout/AuthLayout";
 import { useForm } from "../../hooks";
 import {
-  checkingAuthentication,
   startGoogleSingIn,
   startLoginWithEmailPassword,
 } from "../../store/auth";
