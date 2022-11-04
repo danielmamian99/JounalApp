@@ -9,12 +9,12 @@ import { getEnvironments } from '../helpers/getEnvironments';
 // Your web app's Firebase configuration
 //dev/prod
 // const firebaseConfig = {
-//   apiKey: "AIzaSyCg3dH1bvysaz_tVzQeReOrlEq23VA9gzc",
-//   authDomain: "react-courses-e3bf6.firebaseapp.com",
-//   projectId: "react-courses-e3bf6",
-//   storageBucket: "react-courses-e3bf6.appspot.com",
-//   messagingSenderId: "1054856956705",
-//   appId: "1:1054856956705:web:f7c1e784efa732151c4c60"
+  // apiKey: "AIzaSyCg3dH1bvysaz_tVzQeReOrlEq23VA9gzc",
+  // authDomain: "react-courses-e3bf6.firebaseapp.com",
+  // projectId: "react-courses-e3bf6",
+  // storageBucket: "react-courses-e3bf6.appspot.com",
+  // messagingSenderId: "1054856956705",
+  // appId: "1:1054856956705:web:f7c1e784efa732151c4c60"
 // };
 const {
   VITE_APIKEY,
