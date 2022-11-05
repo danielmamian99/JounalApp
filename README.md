@@ -1,11 +1,12 @@
 # Journal App
 
-Este proyecto esta creado VITE e implementado con el framework React, usando el patron de diseño redux, implementado con redux toolkit. Se utilizaron thunks, forms, customHooks, para el almacenamiento de imagenes se usó Cloudinary, la base de datos esta implementada en FireStore, la autenticación fue implementada con los servicios de firebase Google SingIn y como framework css Material UI.
+Este proyecto esta creado con VITE e implementado con el framework React, usando el patron de diseño redux, implementado con redux toolkit. Se utilizaron thunks, forms, customHooks, para el almacenamiento de imagenes se usó Cloudinary, la base de datos esta implementada en FireStore, la autenticación fue implementada con los servicios de firebase Google SingIn y como framework css Material UI.
 
 ## Para iniciar usar:
 
-yarn install
-yarn dev
+-yarn install
+
+-yarn dev
 
 ## Testing
 
