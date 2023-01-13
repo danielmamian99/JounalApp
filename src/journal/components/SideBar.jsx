@@ -12,12 +12,12 @@ import {
 import { SideBarItem } from "./SideBarItem";
 
 export const SideBar = ({ drawerWidth = 240 }) => {
-  const { displayName } = useSelector((state) => state.auth);
+  const { displayName, photoURL } = useSelector((state) => state.auth);
   const { notes } = useSelector((state) => state.journal);
   return (
     <Box
       component="nav"
-      sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+      sx={{ display: { xs: 'none', md:'flex' } , width: { md: drawerWidth }, flexShrink: { sm: 0 } }}
     >
       <Drawer
         variant="permanent" // temporary
