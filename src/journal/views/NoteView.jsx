@@ -23,7 +23,7 @@ export const NoteView = () => {
   const dateString = useMemo(() => {
     const newDate = new Date(date);
 
-    return newDate.toUTCString();
+    return newDate.toLocaleDateString();
   }, [date]);
   const fileInputRef = useRef();
   useEffect(() => {
@@ -49,7 +49,6 @@ export const NoteView = () => {
   const onDelete = ()=>{
     dispatch( startDeletingNote() )
   }
-
   return (
     <Grid
       className="animate__animated animate__fadeIn animate__faster"
