@@ -7,6 +7,7 @@ export const journalSlice = createSlice({
     messageSaved: "",
     notes: [],
     active: null,
+    showMenu: 'none',
   },
   reducers: {
     savingNewNote: (state) => {
@@ -55,6 +56,9 @@ export const journalSlice = createSlice({
       state.notes = state.notes.filter(note => note.id !== action.payload)
       state.active = null;
     },
+    setShowMenu: (state) => {
+      state.showMenu = state.showMenu === 'none' ? 'flex' : 'none';
+    }
   },
 });
 
@@ -67,5 +71,6 @@ export const {
   setNotes,
   setPhotosToActiveNote,
   setSaving,
+  setShowMenu,
   updateNote,
 } = journalSlice.actions;
