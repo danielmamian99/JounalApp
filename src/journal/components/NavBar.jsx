@@ -4,6 +4,7 @@ import { AppBar, Grid, IconButton, Toolbar, Typography } from '@mui/material';
 import { LogoutOutlined, MenuOutlined } from '@mui/icons-material';
 
 import { startLogout } from '../../store/auth/thunks';
+import { setShowMenu } from '../../store/journal';
 
 
 export const NavBar = ({ drawerWidth = 240 }) => {
@@ -11,6 +12,10 @@ export const NavBar = ({ drawerWidth = 240 }) => {
     const onLogout = ()=>{
         dispatch( startLogout() );
     }
+    const handleMenu = (e) => {
+        dispatch(setShowMenu())
+    }
+
   return (
     <AppBar 
         position='fixed'
@@ -21,6 +26,7 @@ export const NavBar = ({ drawerWidth = 240 }) => {
     >
         <Toolbar>
             <IconButton
+                onClick={handleMenu}
                 color='inherit'
                 edge="start"
                 sx={{ mr: 2, display: { md: 'none' } }}
