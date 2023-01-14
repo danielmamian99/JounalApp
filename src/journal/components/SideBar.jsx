@@ -11,16 +11,19 @@ import {
 } from "@mui/material";
 
 import { SideBarItem } from "./SideBarItem";
-import Image from 'mui-image'
+import Image from "mui-image";
 
 export const SideBar = ({ drawerWidth = 240 }) => {
   const { displayName, photoURL } = useSelector((state) => state.auth);
   const { notes } = useSelector((state) => state.journal);
-  console.log('photoURL >>>', photoURL);
   return (
     <Box
       component="nav"
-      sx={{ display: { xs: 'none', md:'flex' } , width: { md: drawerWidth }, flexShrink: { sm: 0 } }}
+      sx={{
+        display: { xs: "none", md: "flex" },
+        width: { md: drawerWidth },
+        flexShrink: { sm: 0 },
+      }}
     >
       <Drawer
         variant="permanent" // temporary
@@ -28,17 +31,24 @@ export const SideBar = ({ drawerWidth = 240 }) => {
         sx={{
           display: { xs: "block" },
           "& .MuiDrawer-paper": { boxSizing: "border-box", width: drawerWidth },
+          "& .mui-image-img": {borderRadius:'50%'}
         }}
       >
-        <Toolbar>
+        <Toolbar sx={{justifyContent:'space-around'}}>
           <Typography variant="h6" noWrap component="div">
             {displayName}
           </Typography>
-          {photoURL && 
-          <Grid sx={{display:'flex', justifyContent:'center'}}>
-            <Image src={photoURL} fit="cover" height='80%' width='50%' showLoading={true}/>
-          </Grid>
-          }
+          {photoURL && (
+            <Grid sx={{ width:'20%', display: "flex", justifyContent: "center" }}>
+              <Image
+                src={photoURL}
+                fit="cover"
+                height="100%"
+                width="100%"
+                showLoading={true}
+              />
+            </Grid>
+          )}
         </Toolbar>
         <Divider />
 
