@@ -1,7 +1,7 @@
 # Journal App
 
 
-#### https://jeferson-daniel-mamian-notas.netlify.app/ 
+Link: https://jeferson-daniel-mamian-notas.netlify.app/ 
 
 Esta app sirve para guardar notas e imagenes. Esta creado con VITE e implementado con el framework React, usando el patron de diseño redux, implementado con redux toolkit. Se utilizaron thunks, forms, customHooks, para el almacenamiento de imagenes se usó Cloudinary, la base de datos esta implementada en FireStore, la autenticación fue implementada con los servicios de firebase Google SingIn y como framework css Material UI. 
 
